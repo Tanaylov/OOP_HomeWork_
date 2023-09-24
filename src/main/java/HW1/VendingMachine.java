@@ -9,7 +9,10 @@ public class VendingMachine {
         if (capacity < 10) this.capacity = 10;
         else this.capacity  = capacity;
     }
-//    public VendingMachine(Product ... products) {capacity = products.length + 2;}
+    public VendingMachine(ArrayList<Product> products) {
+        capacity = products.size() + 2;
+        productArrayList = products;
+    }
     public VendingMachine() {capacity = 10;}
     private void increaseCapacity() {if (capacity - productArrayList.size() == 1) capacity *= 1.5;}
     public void addItem(Product product) {
